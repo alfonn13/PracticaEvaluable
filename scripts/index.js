@@ -2,6 +2,7 @@ const mostrar = document.getElementById('mostrar');
 const buscar = document.getElementById('buscar');
 const añadir = document.getElementById('añadir');
 const actualizar = document.getElementById('actualizar');
+const total = document.getElementById('total');
 
 
 const inventario = [
@@ -16,6 +17,12 @@ console.log(inventario);
 
 //FUNCION GENERAR TABLA
 function generarTabla() {
+
+    const tablaExistente = document.querySelector("table");
+        if (tablaExistente) {
+            tablaExistente.remove();
+        }
+    
     const tabla = document.createElement("table");
     tabla.innerHTML = `
       <thead>
@@ -41,14 +48,16 @@ function generarTabla() {
       </tbody>`;
 
     return tabla;
+
+    
   }
 
-
-  mostrar.addEventListener('click', ()=>{
+function mostrarInventario() {
     const tablaInventario = generarTabla();
     document.body.appendChild(tablaInventario);
+}
 
-  });
+mostrar.addEventListener('click', mostrarInventario);
 
   //FUNCION BUSCAR
   buscar.addEventListener('click', () => {
@@ -95,8 +104,7 @@ function generarTabla() {
 })
 
 // FUNCION AGREGAR PRODUCTO
-
-añadir.addEventListener('click', ()=>{
+/*añadir.addEventListener('click', ()=>{
     const id = inventario.length + 1;  // Asignamos un nuevo ID
     const nombre = prompt("Ingrese el nombre del producto:");
     const cantidad = parseInt(prompt("Ingrese la cantidad del producto:"));
@@ -109,10 +117,52 @@ añadir.addEventListener('click', ()=>{
     } else {
         alert("Entrada inválida. No se ha agregado ningún producto.");
     }
+
+    const tablaExistente = document.querySelector("table");
+        if (tablaExistente) {
+            tablaExistente.remove();
+        }
+
+    
+});
+*/
+
+function agregarProducto() {
+    const id = inventario.length + 1;  // Asignamos un nuevo ID
+    const nombre = prompt("Ingrese el nombre del producto:");
+    const cantidad = parseInt(prompt("Ingrese la cantidad del producto:"));
+    const precio = parseFloat(prompt("Ingrese el precio del producto:"));
+
+    if (nombre && !isNaN(cantidad) && !isNaN(precio)) {
+        const nuevoProducto = { id, nombre, cantidad, precio };
+        inventario.push(nuevoProducto);
+        alert("Producto agregado con éxito.");
+    } else {
+        alert("Entrada inválida. No se ha agregado ningún producto.");
+    }
+
+    // Llamar a la función para generar y mostrar la tabla actualizada
+    mostrarInventario();
+}
+
+añadir.addEventListener('click', () => {
+    agregarProducto();
 });
 
+//Funcion aumentar cantidad en inventario
+function aumentarCantidadEnInventario() {
+    let i=0;
+    while ( i < inventario.length) {    
+        inventario[i].cantidad = Math.round(inventario[i].cantidad * 1.10);// Aumenta la cantidad en un 10%
+        i++;
+    }
 
-// FUNCION ACTUALIZAR PRODUCTO (PROBLEMA CON EL INNER HTML DE ABAJO REALMENTE NO SE COMO HACER LA ACTUALIZAR DEPSUES DE INGRESAR LOS DATOS)
+
+    // Llamar a la función para generar y mostrar la tabla actualizada
+    mostrarInventario();
+}
+
+// FUNCION ACTUALIZAR PRODUCTO PRIMERO HAY QUE MOSTRARLA OARA VER LOS QUE HAY
 
 actualizar.addEventListener('click',()=>{
     const productoSeleccionado = prompt("Por favor, ingrese el nombre del producto que quieres actualizar:");
@@ -130,8 +180,9 @@ actualizar.addEventListener('click',()=>{
               producto.precio = nuevoPrecio;
             
             
-                // Actualiza la tabla
-                const filaProducto = document.getElementById(`fila-${producto.id}`);
+              generarTabla();
+
+              const filaProducto = document.getElementById(`fila-${producto.id}`);
                 filaProducto.innerHTML = `
                 <td>${producto.id}</td>
                 <td>${producto.nombre}</td>
@@ -144,11 +195,28 @@ actualizar.addEventListener('click',()=>{
                 alert("Entrada invalida. No se ha actualizado");
             }
         }else{
-            alert("Producto no encontrado.");
+            alert('No podemos actualizar un producto no existente, entonces vamos a añadirlo a la tabla');
+            agregarProducto();
+            
+            aumentarCantidadEnInventario();
         }
 });
 
 
+total.addEventListener('click', ()=>{
+    const totalDisplay = document.getElementById('totalDisplay');
+    let totality=0;
+
+    for(let i=0;i<inventario.length;i++){
+        const producto = inventario[i];
+        const productoTotal = producto.cantidad * producto.precio;
+        totality += productoTotal;
+    }
+
+    totalDisplay.innerHTML = `<p>Total del inventario: ${totality} $</p>`;
+
+    
+})
         
     
 
