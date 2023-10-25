@@ -1,0 +1,61 @@
+body{
+    
+    background: rgb(244,157,12);
+    background: linear-gradient(90deg, rgba(244,157,12,1) 17%, rgba(216,118,7,1) 48%, rgba(188,86,10,1) 93%);
+}
+
+.title{
+    text-align: center;
+    color: white;
+}
+
+.form{
+    height: 300px;
+    width: 800px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 20px;
+    background: rgb(254,243,199);
+    background: radial-gradient(circle, rgba(254,243,199,1) 22%, rgba(253,229,138,1) 42%);
+    margin: 0 auto;
+    
+       
+}
+
+.añadir{
+    cursor: pointer;
+    margin-left: 90px;
+}
+
+.search{
+    padding: 30px;
+    font-size: 40px;
+    
+    display: flex;
+    gap: 5px;
+}
+
+.buscador{
+    width: 60%;
+    height: 25px;
+    
+}
+
+.tabla{
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+    align-items: center;
+    margin: 45px auto;
+    
+}
+
+.tabla td{
+    border: 2px solid;
+    padding: 10px;
+}
+
+.tabla th{
+    border: 2px solid;
+    padding: 15px 80px;
+}

@@ -24,6 +24,7 @@ function generarTabla() {
         }
     
     const tabla = document.createElement("table");
+    tabla.className = "tabla";
     tabla.innerHTML = `
       <thead>
         <tr>
@@ -41,6 +42,7 @@ function generarTabla() {
                 <td>${item.nombre}</td>
                 <td>${item.cantidad}</td>
                 <td>${item.precio}</td>
+                
               </tr>`
           )
           //Concatena todos los items de los archivos
@@ -65,6 +67,7 @@ mostrar.addEventListener('click', mostrarInventario);
     let productoEncontrado = false;
   
     const tabla = document.createElement("table");
+    tabla.classList.add  ("tabla");
     tabla.innerHTML = `
       <thead>
         <tr>
@@ -85,6 +88,7 @@ mostrar.addEventListener('click', mostrarInventario);
             <td>${item.nombre}</td>
             <td>${item.cantidad}</td>
             <td>${item.precio}</td>
+
           </tr>`;
         productoEncontrado = true;
       }
@@ -191,6 +195,7 @@ actualizar.addEventListener('click',()=>{
                 `;
             
                 alert("Producto actualizado con éxito.");
+                mostrarInventario();
             } else {
                 alert("Entrada invalida. No se ha actualizado");
             }
