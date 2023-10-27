@@ -3,6 +3,7 @@ const buscar = document.getElementById('buscar');
 const añadir = document.getElementById('añadir');
 const actualizar = document.getElementById('actualizar');
 const total = document.getElementById('total');
+const eliminar = document.getElementById('eliminar');
 
 
 const inventario = [
@@ -14,6 +15,19 @@ const inventario = [
 ];
 
 console.log(inventario);
+
+const calculateTotal = () => {
+  const totalDisplay = document.getElementById('totalDisplay');
+  let totality=0;
+
+  for(let i=0;i<inventario.length;i++){
+      const producto = inventario[i];
+      const productoTotal = producto.cantidad * producto.precio;
+      totality += productoTotal;
+  }
+
+  totalDisplay.innerHTML = `<p>Total del inventario: ${totality} $</p>`;
+}
 
 //FUNCION GENERAR TABLA
 function generarTabla() {
@@ -32,6 +46,7 @@ function generarTabla() {
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>Precio</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -75,6 +90,7 @@ mostrar.addEventListener('click', mostrarInventario);
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>Precio</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>`;
@@ -88,6 +104,7 @@ mostrar.addEventListener('click', mostrarInventario);
             <td>${item.nombre}</td>
             <td>${item.cantidad}</td>
             <td>${item.precio}</td>
+            <td> ${actualizar} </td>
 
           </tr>`;
         productoEncontrado = true;
@@ -126,7 +143,6 @@ mostrar.addEventListener('click', mostrarInventario);
         if (tablaExistente) {
             tablaExistente.remove();
         }
-
     
 });
 */
@@ -141,6 +157,7 @@ function agregarProducto() {
         const nuevoProducto = { id, nombre, cantidad, precio };
         inventario.push(nuevoProducto);
         alert("Producto agregado con éxito.");
+        calculateTotal(); 
     } else {
         alert("Entrada inválida. No se ha agregado ningún producto.");
     }
@@ -207,23 +224,22 @@ actualizar.addEventListener('click',()=>{
         }
 });
 
+total.addEventListener("click" , calculateTotal);
 
-total.addEventListener('click', ()=>{
-    const totalDisplay = document.getElementById('totalDisplay');
-    let totality=0;
 
-    for(let i=0;i<inventario.length;i++){
-        const producto = inventario[i];
-        const productoTotal = producto.cantidad * producto.precio;
-        totality += productoTotal;
+eliminar.addEventListener("click" , ()=>{
+    const eliminado = prompt("Por favor, que producto quieres eliminar:");
+
+    const productoeliminado = inventario.find(item => item.nombre === eliminado);
+
+    if(productoeliminado){
+        inventario.splice(productoeliminado, 1);
+        console.log('productoeliminado');
+        mostrarInventario();
     }
-
-    totalDisplay.innerHTML = `<p>Total del inventario: ${totality} $</p>`;
-
-    
 })
+
         
-    
+mostrarInventario();   
 
 
-    
