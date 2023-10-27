@@ -1,7 +1,7 @@
 body{
     
-    background: rgb(244,157,12);
-    background: linear-gradient(90deg, rgba(244,157,12,1) 17%, rgba(216,118,7,1) 48%, rgba(188,86,10,1) 93%);
+    background: rgb(33,150,243);
+    background: linear-gradient(90deg, rgba(33,150,243,1) 0%, rgba(9,9,121,1) 97%); 
 }
 
 .title{
@@ -10,17 +10,20 @@ body{
 }
 
 .form{
-    height: 300px;
-    width: 800px;
+    height: 270px;
+    width: 600px;
     text-align: center;
     border: 1px solid;
     border-radius: 20px;
-    background: rgb(254,243,199);
-    background: radial-gradient(circle, rgba(254,243,199,1) 22%, rgba(253,229,138,1) 42%);
+    background-color: bisque;
     margin: 0 auto;
-    
+    box-shadow: -15px 18px 19px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -15px 18px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -15px 18px 19px 0px rgba(0,0,0,0.75);
        
 }
+
+
 
 .añadir{
     cursor: pointer;
@@ -29,7 +32,7 @@ body{
 
 .search{
     padding: 30px;
-    font-size: 40px;
+    font-size: 45px;
     
     display: flex;
     gap: 5px;
@@ -37,7 +40,7 @@ body{
 
 .buscador{
     width: 60%;
-    height: 25px;
+    height: 35px;
     
 }
 
@@ -47,6 +50,7 @@ body{
     text-align: center;
     align-items: center;
     margin: 45px auto;
+    color: white;
     
 }
 

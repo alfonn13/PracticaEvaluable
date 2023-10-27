@@ -90,7 +90,7 @@ mostrar.addEventListener('click', mostrarInventario);
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>Precio</th>
-          <th>Acciones</th>
+          
         </tr>
       </thead>
       <tbody>`;
@@ -104,7 +104,7 @@ mostrar.addEventListener('click', mostrarInventario);
             <td>${item.nombre}</td>
             <td>${item.cantidad}</td>
             <td>${item.precio}</td>
-            <td> ${actualizar} </td>
+            
 
           </tr>`;
         productoEncontrado = true;
