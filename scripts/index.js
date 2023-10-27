@@ -227,17 +227,20 @@ actualizar.addEventListener('click',()=>{
 total.addEventListener("click" , calculateTotal);
 
 
-eliminar.addEventListener("click" , ()=>{
-    const eliminado = prompt("Por favor, que producto quieres eliminar:");
+eliminar.addEventListener("click", () => {
+  const nombreAEliminar = prompt("Por favor, ingrese el nombre del producto que desea eliminar:");
 
-    const productoeliminado = inventario.find(item => item.nombre === eliminado);
+  const indexProductoAEliminar = inventario.findIndex(item => item.nombre.toLowerCase() === nombreAEliminar.toLowerCase());
 
-    if(productoeliminado){
-        inventario.splice(productoeliminado, 1);
-        console.log('productoeliminado');
-        mostrarInventario();
-    }
-})
+  if (indexProductoAEliminar !== -1) {
+      const productoEliminado = inventario.splice(indexProductoAEliminar, 1)[0];
+      console.log(`Producto "${productoEliminado.nombre}" eliminado.`);
+      mostrarInventario();
+  } else {
+      alert('Producto no encontrado. No se ha eliminado ningún producto.');
+  }
+});
+
 
         
 mostrarInventario();   
