@@ -1,15 +1,17 @@
-body{
-    
-    background: rgb(33,150,243);
-    background: linear-gradient(90deg, rgba(33,150,243,1) 0%, rgba(9,9,121,1) 97%); 
+body {
+
+    background: rgb(33, 150, 243);
+    background: linear-gradient(90deg, rgba(33, 150, 243, 1) 0%, rgba(9, 9, 121, 1) 97%);
+
 }
 
-.title{
+.title {
     text-align: center;
     color: white;
 }
 
-.form{
+.form {
+
     height: 270px;
     width: 600px;
     text-align: center;
@@ -17,49 +19,114 @@ body{
     border-radius: 20px;
     background-color: bisque;
     margin: 0 auto;
-    box-shadow: -15px 18px 19px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: -15px 18px 19px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -15px 18px 19px 0px rgba(0,0,0,0.75);
-       
+    box-shadow: -15px 18px 19px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -15px 18px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -15px 18px 19px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    /* Divide en tres columnas */
+    align-items: center;
+    padding: 15px;
+
+}
+
+.logo-farmacia {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.gestion-inventario {
+    text-align: center;
+}
+
+.titleh1 {
+    font-size: 25px;
+    color: white;
+}
+
+.menu-bar {
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    width: 40px;
+    height: 40px;
+    transition: 0.4s;
+}
+
+.hamburger-icon:hover {
+    cursor: pointer;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.active{
+    display: block;
+}
+
+
+.log-out-link {
+    color: #333;
+    text-decoration: none; 
+}
+
+
+.hamburger-icon.active {
+    opacity: 0;
 }
 
 
 
-.añadir{
+.añadir {
     cursor: pointer;
     margin-left: 90px;
 }
 
-.search{
+.search {
     padding: 30px;
     font-size: 45px;
-    
+
     display: flex;
     gap: 5px;
 }
 
-.buscador{
+.buscador {
     width: 60%;
     height: 35px;
-    
+
 }
 
-.tabla{
+.tabla {
     border: 2px solid;
     border-collapse: collapse;
     text-align: center;
     align-items: center;
     margin: 45px auto;
     color: white;
-    
+
 }
 
-.tabla td{
+.tabla td {
     border: 2px solid;
     padding: 10px;
 }
 
-.tabla th{
+.tabla th {
     border: 2px solid;
     padding: 15px 80px;
 }

@@ -7,40 +7,55 @@
     <title>Inventario</title>
 </head>
 <body>
-    <h1 class="title">Inventario de Tienda</h1>
 
-        <div class="form">
-            
-            <div class="search">
-                <input type="text" id="buscador" class="buscador">
-                <button id="buscar" class="button">Buscar</button>
-                <button id="añadir" class=" button añadir">+ Nuevo Producto</button>
-            </div>
-        
-            <div >
-                <button id="mostrar" class="button">Mostrar</button>
-            </div>
-        
-            
-        
-            <div >
-                <button id="actualizar" class="button">Editar</button>
-            </div>
-        
-            <div >
-                <button id="eliminar" class="button">Eliminar</button>
-                
-            </div>
-
-            <div>
-                <button id="total" class="button">Total Inventario</button>
-                <div id="totalDisplay"></div>
-            </div>
-
-            
-            
-
+    <nav class="nav">
+        <div class="logo-farmacia">
+          <img src="/assets/bmw.webp" alt="logo farmacia" width="100px" height="100px">
         </div>
+        <div class="gestion-inventario">
+          <h1 class="titleh1">Inventario Tienda BMW</h1>
+        </div>
+        <div class="menu-bar" id="menu-icon">
+            <img src="assets/menu-de-hamburguesas.png" class="hamburger-icon"  alt="hamburguesa">
+        </div>
+        
+    </nav>
+
+    <div class="menu-dropdown" id="menu-dropdown">
+        <a href="#" id="log-out-link" class="log-out-link">Log Out</a>
+        
+    </div>
+    
+    
+
+    <div class="form">
+            
+        <div class="search">
+            <input type="text" id="buscador" class="buscador">
+            <button id="buscar" class="button">Buscar</button>
+            <button id="añadir" class=" button añadir">+ Nuevo Producto</button>
+        </div>
+        
+        <div >
+            <button id="mostrar" class="button">Mostrar</button>
+        </div>
+         
+        
+        <div >
+            <button id="actualizar" class="button">Editar</button>
+        </div>
+        
+        <div >
+            <button id="eliminar" class="button">Eliminar</button>       
+        </div>
+
+        <div>
+            <button id="total" class="button">Total Inventario</button>
+            <div id="totalDisplay"></div>
+        </div>
+
+    </div>
+
 
 
     

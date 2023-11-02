@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById('password');
     const loginButton = document.getElementById('login-button');
     const user = document.getElementById('user');
-    
-  
+
     eyeOpen.addEventListener("click", () => {
       eyeOpen.classList.add('hidden');
       eyeClose.classList.remove('hidden');

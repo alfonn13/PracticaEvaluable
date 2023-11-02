@@ -1,9 +1,24 @@
+
+
 const mostrar = document.getElementById('mostrar');
 const buscar = document.getElementById('buscar');
 const añadir = document.getElementById('añadir');
 const actualizar = document.getElementById('actualizar');
 const total = document.getElementById('total');
 const eliminar = document.getElementById('eliminar');
+const menuIcon = document.getElementById("menu-icon");
+const menuDropdown = document.getElementById("menu-dropdown");
+const logout = document.getElementById("log-out-link");
+
+menuIcon.addEventListener("click", function () {
+  console.log("Clic en el ícono de hamburguesa");
+  menuDropdown.classList.toggle("active");
+});
+
+logout.addEventListener("click", function () {
+  document.location.href = "index.html";
+
+});
 
 
 const inventario = [
@@ -13,6 +28,8 @@ const inventario = [
     {id:3, nombre: "Zapatos", cantidad:20, precio:50},
 
 ];
+
+
 
 console.log(inventario);
 
@@ -73,6 +90,23 @@ function mostrarInventario() {
     const tablaInventario = generarTabla();
     document.body.appendChild(tablaInventario);
 }
+
+function eliminarProducto() {
+  const eliminar = document.getElementById('eliminar');
+  const nombreAEliminar = prompt("Por favor, ingrese el nombre del producto que desea eliminar:");
+
+  const indexProductoAEliminar = inventario.findIndex(item => item.nombre.toLowerCase() === nombreAEliminar.toLowerCase());
+
+  if (indexProductoAEliminar !== -1) {
+      const productoEliminado = inventario.splice(indexProductoAEliminar, 1)[0];
+      console.log(`Producto "${productoEliminado.nombre}" eliminado.`);
+      mostrarInventario();
+  } else {
+      alert('Producto no encontrado. No se ha eliminado ningún producto.');
+  }
+}
+
+eliminar.addEventListener("click", eliminarProducto);
 
 mostrar.addEventListener('click', mostrarInventario);
 
@@ -227,19 +261,6 @@ actualizar.addEventListener('click',()=>{
 total.addEventListener("click" , calculateTotal);
 
 
-eliminar.addEventListener("click", () => {
-  const nombreAEliminar = prompt("Por favor, ingrese el nombre del producto que desea eliminar:");
-
-  const indexProductoAEliminar = inventario.findIndex(item => item.nombre.toLowerCase() === nombreAEliminar.toLowerCase());
-
-  if (indexProductoAEliminar !== -1) {
-      const productoEliminado = inventario.splice(indexProductoAEliminar, 1)[0];
-      console.log(`Producto "${productoEliminado.nombre}" eliminado.`);
-      mostrarInventario();
-  } else {
-      alert('Producto no encontrado. No se ha eliminado ningún producto.');
-  }
-});
 
 
         
