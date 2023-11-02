@@ -1,8 +1,42 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../assets/fonts/static/RobotoSlab-Regular.ttf");
+}
 body {
-
     background: rgb(33, 150, 243);
     background: linear-gradient(90deg, rgba(33, 150, 243, 1) 0%, rgba(9, 9, 121, 1) 97%);
+}
 
+.button{
+    background: rgb(0, 0, 0);
+    border: none;
+    color: white;
+    border-radius: 7px;
+    font-family: Roboto;
+    
+}
+
+.action-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+
+.button.action{
+    width: 130px;
+    padding: 10px;
+    
+}
+
+.button.action2{
+    padding: 10px;
+    width: 130px;
+}
+
+.button.search1{
+    width: 80px;
 }
 
 .title {
@@ -12,16 +46,21 @@ body {
 
 .form {
 
-    height: 270px;
+    height: 200px;
     width: 600px;
     text-align: center;
     border: 1px solid;
     border-radius: 20px;
-    background-color: bisque;
+    background-color: #dcdcdc;
     margin: 0 auto;
     box-shadow: -15px 18px 19px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -15px 18px 19px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -15px 18px 19px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+    justify-content: center;
 
 }
 
@@ -44,7 +83,7 @@ body {
 }
 
 .titleh1 {
-    font-size: 25px;
+    font-size: 30px;
     color: white;
 }
 
@@ -98,9 +137,7 @@ body {
 }
 
 .search {
-    padding: 30px;
     font-size: 45px;
-
     display: flex;
     gap: 5px;
 }
@@ -112,7 +149,7 @@ body {
 }
 
 .tabla {
-    border: 2px solid;
+    border: 3px solid;
     border-collapse: collapse;
     text-align: center;
     align-items: center;
@@ -122,11 +159,11 @@ body {
 }
 
 .tabla td {
-    border: 2px solid;
-    padding: 10px;
+    border: 3px solid;
+    padding: 18px;
 }
 
 .tabla th {
-    border: 2px solid;
-    padding: 15px 80px;
+    border: 3px solid;
+    padding: 18px 80px;
 }

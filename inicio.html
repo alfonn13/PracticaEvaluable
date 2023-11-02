@@ -32,25 +32,18 @@
             
         <div class="search">
             <input type="text" id="buscador" class="buscador">
-            <button id="buscar" class="button">Buscar</button>
+            <button id="buscar" class="button search1">Buscar</button>
             <button id="añadir" class=" button añadir">+ Nuevo Producto</button>
         </div>
         
-        <div >
-            <button id="mostrar" class="button">Mostrar</button>
-        </div>
-         
-        
-        <div >
-            <button id="actualizar" class="button">Editar</button>
-        </div>
-        
-        <div >
-            <button id="eliminar" class="button">Eliminar</button>       
+        <div class="action-wrapper" >
+            <button id="mostrar" class="button action">Mostrar</button>
+            <button id="actualizar" class="button action">Editar</button>
+            <button id="eliminar" class="button action">Eliminar</button>       
         </div>
 
         <div>
-            <button id="total" class="button">Total Inventario</button>
+            <button id="total" class="button action2">Total Inventario</button>
             <div id="totalDisplay"></div>
         </div>
 
@@ -59,6 +52,6 @@
 
 
     
-    <script src="scripts/index.js"></script>
+    <script src="scripts/index.js" type="module"></script>
 </body>
 </html>
