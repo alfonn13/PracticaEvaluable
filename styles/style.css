@@ -13,8 +13,10 @@ body {
     color: white;
     border-radius: 7px;
     font-family: Roboto;
+    cursor: pointer;
     
 }
+
 
 .action-wrapper{
     display: flex;

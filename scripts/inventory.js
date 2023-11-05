@@ -21,6 +21,4 @@ export const inventario = [
     { id: 20, nombre: "BMW X8", cantidad: 6, precio: 80000 },
 ];
 
-
-
 console.log(inventario);
