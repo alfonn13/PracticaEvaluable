@@ -9,7 +9,7 @@ export function eliminarProducto() {
   
     if (indexProductoAEliminar !== -1) {
         const productoEliminado = inventario.splice(indexProductoAEliminar, 1)[0];
-        console.log(`Producto "${productoEliminado.nombre}" eliminado.`);
+        alert(`Producto "${productoEliminado.nombre}" eliminado.`);
         mostrarInventario();
     } else {
         alert('Producto no encontrado. No se ha eliminado ningún producto.');
