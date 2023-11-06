@@ -14,7 +14,6 @@ export function generarTabla() {
     tabla.innerHTML = `
       <thead>
         <tr>
-          <th>ID</th>
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>Precio</th>
@@ -25,7 +24,6 @@ export function generarTabla() {
 
         ${inventario.map(item =>
               `<tr id="fila-${item.id}">
-                <td>${item.id}</td>
                 <td>${item.nombre}</td>
                 <td>${item.cantidad}</td>
                 <td>${item.precio}</td>

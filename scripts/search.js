@@ -10,7 +10,6 @@ export function buscarProducto() {
     tabla.innerHTML = `
       <thead>
         <tr>
-          <th>ID</th>
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>Precio</th>
@@ -23,7 +22,6 @@ export function buscarProducto() {
       if (item.nombre.toLowerCase().includes(nombreBuscado)) {
         tabla.innerHTML += `
           <tr>
-            <td>${item.id}</td>
             <td>${item.nombre}</td>
             <td>${item.cantidad}</td>
             <td>${item.precio}</td>
