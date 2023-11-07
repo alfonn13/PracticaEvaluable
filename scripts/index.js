@@ -1,8 +1,6 @@
 /*
 Nombre: Alfonso Reviejo Valle
-Github:
-
-
+Github: https://github.com/alfonn13/PracticaEvaluable
 */
 
 import {agregarProducto} from './addProduct.js';
