@@ -1,4 +1,6 @@
+// Importa el arreglo 'inventario' desde el módulo 'inventory.js'
 import { inventario } from "./inventory.js";
+
 
 const mostrar = document.getElementById('mostrar');
 
@@ -26,11 +28,11 @@ export function generarTabla() {
               `<tr id="fila-${item.id}">
                 <td>${item.nombre}</td>
                 <td>${item.cantidad}</td>
-                <td>${item.precio} $</td>
+                <td>$${item.precio}</td>
                 
               </tr>`
           )
-          //Concatena todos los items de los archivos
+          //.join para concatenar todos los items de los archivos
           .join("")}
       </tbody>`;
 

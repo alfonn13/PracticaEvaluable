@@ -1,3 +1,5 @@
+// Creamos el array 'inventario' que almacena información de productos BMW
+
 export const inventario = [
     { id: 1, nombre: "BMW X3", cantidad: 15, precio: 45000 },
     { id: 2, nombre: "BMW 3 Series", cantidad: 18, precio: 40000 },

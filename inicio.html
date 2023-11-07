@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Enlace para la hoja de estilos-->
     <link rel="stylesheet" href="styles/style.css">
-    <title>Inventario</title>
+    <title>Gestion Inventario BMW</title>
 </head>
 <body>
 
@@ -18,18 +19,15 @@
         <div class="menu-bar" id="menu-icon">
             <img src="assets/menu-de-hamburguesas.png" class="hamburger-icon"  alt="hamburguesa">
         </div>
-        
     </nav>
 
+    <!--Menu que nos salga un LogOut que nos manda al Login si le damos-->
     <div class="menu-dropdown" id="menu-dropdown">
-        <a href="#" id="log-out-link" class="log-out-link">Log Out</a>
-        
+        <a href="#" id="log-out-link" class="log-out-link">Log Out</a>    
     </div>
     
-    
 
-    <div class="form">
-            
+    <div class="form">  
         <div class="search">
             <input type="text" id="buscador" class="buscador">
             <button id="buscar" class="button search1">Buscar</button>
@@ -46,12 +44,9 @@
             <button id="total" class="button action2">Total Inventario</button>
             <div id="totalDisplay"></div>
         </div>
-
     </div>
 
-
-
-    
+    <!-- Enlace al script para las funcionalidades de los botones -->
     <script src="scripts/index.js" type="module"></script>
 </body>
 </html>

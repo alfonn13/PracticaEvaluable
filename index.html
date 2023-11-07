@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <!--Enlace para la hoja de estilos-->
     <link rel="stylesheet" href="styles/inicio.css">
 </head>
 <body>
+    <!--Login antes de entrar en el inventario-->
+
     <div class="login">
         <h1>Login</h1>
         <div class="input-wrapper">
@@ -18,17 +21,16 @@
             <img src="assets/password.png" alt="password" width="30px">
             <input type="password" placeholder="Ingrese tu Contraseña" id="password" required>
             <img src="assets/eye-open.png" alt="password" width="30px" id="eye-open" class="eye-button">
-            <img src="assets/eye-close.png" alt="password" width="30px" id="eye-close" class="eye-button hidden"  >
-
+            <img src="assets/eye-close.png" alt="password" width="30px" id="eye-close" class="eye-button hidden" >
         </div>
 
         <div class="button">
-        
             <button class="login-button" id="login-button">Login Now</button>
-
         </div>
-        
     </div>
+
+    <!-- Enlace al script para el ojo de la contraseña y para cambiar de pantalla (Gestion de Inventario)
+    cuando la contraseña sea la correcta -->
 
     <script src="scripts/showpassword.js" type="module"></script>
 </body>

@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginButton = document.getElementById('login-button');
     const user = document.getElementById('user');
 
+    /*AddEvenListener para que cuando clickamos el ojo nos aparezca o nos salga la contraseña con puntos
+    y no se vea la contraseña*/
     eyeOpen.addEventListener("click", () => {
       eyeOpen.classList.add('hidden');
       eyeClose.classList.remove('hidden');
@@ -17,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       password.type = 'password';
     });
   
+    /*Si la contraseña es correcta cambiaremos y iremos a la pantalla inicio.html
+     que es donde esta el inventario*/
     loginButton.addEventListener("click", () => {
       const passwordValue = password.value;
       const userValue = user.value;

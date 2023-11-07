@@ -1,6 +1,6 @@
+// Importa el array 'inventario' desde el módulo 'inventory.js'
+
 import { inventario } from "./inventory.js";
-
-
 
 export const calculateTotal = () => {
     const totalDisplay = document.getElementById('totalDisplay');
