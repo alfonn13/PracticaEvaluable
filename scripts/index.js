@@ -1,3 +1,10 @@
+/*
+Nombre: Alfonso Reviejo Valle
+Github:
+
+
+*/
+
 import {agregarProducto} from './addProduct.js';
 import {eliminarProducto} from './delete.js';
 import {mostrarInventario} from './listProduct.js';
