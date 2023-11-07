@@ -1,3 +1,4 @@
+// Importar los módulos necesarios para el funcionamiento de update.js
 import { inventario } from "./inventory.js";
 import { mostrarInventario } from "./listProduct.js";
 import { agregarProducto } from "./addProduct.js";

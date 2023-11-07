@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (userValue === '' || passwordValue === '') {
         alert('Introduzca los datos');
       } else if (passwordValue === PIN) {
-        window.location.href = 'inicio.html'; // Cambiado a 'inicio.html'
+        window.location.href = '/templates/inicio.html'; // Cambiado a 'inicio.html'
       } else {
         alert('Contraseña incorrecta');
       }

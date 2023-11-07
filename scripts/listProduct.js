@@ -1,4 +1,4 @@
-// Importa el arreglo 'inventario' desde el módulo 'inventory.js'
+// Importa el array 'inventario' desde el módulo 'inventory.js'
 import { inventario } from "./inventory.js";
 
 

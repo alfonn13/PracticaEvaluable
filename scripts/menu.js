@@ -10,7 +10,7 @@ export function toggleMenu() {
 
   // Cambiamos de pantalla al index.html que es donde esta el Login
 export function redirectToIndex() {
-    document.location.href = "index.html";
+    document.location.href = "../index.html";
 }
   
 menuIcon.addEventListener("click", toggleMenu);
