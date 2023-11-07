@@ -11,13 +11,13 @@ export function agregarProducto() {
     const cantidad = parseInt(prompt("Ingrese la cantidad del producto:"));
     const precio = parseFloat(prompt("Ingrese el precio del producto:"));
 
-    if (nombre && !isNaN(cantidad) && !isNaN(precio)) {
+    if (nombre && !isNaN(cantidad) && !isNaN(precio) && cantidad>0 && precio>0) {
         const nuevoProducto = { id, nombre, cantidad, precio };
         inventario.push(nuevoProducto);
         alert("Producto agregado con éxito.");
         calculateTotal(); 
     } else {
-        alert("Entrada inválida. No se ha agregado ningún producto.");
+        alert("Entrada inválida. No se ha agregado ningún producto. Comprueba si el precio y la cantidad introducida es mayor que 0.");
     }
 
     // Llamar a la función para generar y mostrar la tabla actualizada

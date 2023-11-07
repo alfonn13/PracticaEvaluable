@@ -27,11 +27,10 @@ export function actualizarProducto() {
       const nuevaCantidad = parseInt(prompt("Ingrese la nueva cantidad del producto:"));
       const nuevoPrecio = parseFloat(prompt("Ingrese el nuevo precio del producto:"));
     
-      if (nuevoNombre && !isNaN(nuevaCantidad) && !isNaN(nuevoPrecio)) {
+      if (nuevoNombre && !isNaN(nuevaCantidad) && !isNaN(nuevoPrecio) && nuevaCantidad > 0 && nuevoPrecio > 0) {
         producto.nombre = nuevoNombre;
         producto.cantidad = nuevaCantidad;
         producto.precio = nuevoPrecio;
-  
         const filaProducto = document.getElementById(`fila-${producto.id}`);
         filaProducto.innerHTML = `
           <td>${producto.id}</td>
@@ -43,7 +42,7 @@ export function actualizarProducto() {
         alert("Producto actualizado con éxito.");
         mostrarInventario();
       } else {
-        alert("Entrada inválida. No se ha actualizado.");
+        alert("Entrada inválida. No se ha actualizado. Comprueba si el nuevo precio y la nueva cantidad introducida son mayores que 0 para que se pued actualizar correctamente.");
       }
     } else {
       alert('No podemos actualizar un producto no existente, entonces vamos a añadirlo a la tabla');
