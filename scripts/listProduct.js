@@ -26,7 +26,7 @@ export function generarTabla() {
               `<tr id="fila-${item.id}">
                 <td>${item.nombre}</td>
                 <td>${item.cantidad}</td>
-                <td>${item.precio}</td>
+                <td>${item.precio} $</td>
                 
               </tr>`
           )

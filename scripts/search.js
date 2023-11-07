@@ -24,7 +24,7 @@ export function buscarProducto() {
           <tr>
             <td>${item.nombre}</td>
             <td>${item.cantidad}</td>
-            <td>${item.precio}</td>
+            <td>${item.precio} $</td>
           </tr>`;
         productoEncontrado = true;
       }
