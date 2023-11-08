@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
     loginButton.addEventListener("click", () => {
       const passwordValue = password.value;
       const userValue = user.value;
-      const PIN = "Alfonso1234"
+      const PIN = "12345"
   
       if (userValue === '' || passwordValue === '') {
         alert('Introduzca los datos');
       } else if (passwordValue === PIN) {
         window.location.href = '/templates/inicio.html'; // Cambiado a 'inicio.html'
       } else {
-        alert('Contraseña incorrecta');
+        alert('Contraseña incorrecta'); 
       }
     });
   });
